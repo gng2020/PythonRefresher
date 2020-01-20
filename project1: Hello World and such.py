@@ -30,7 +30,10 @@ print (myFunc().upper()) # upper
 print (myFunc().lower()) # lower
 print (myFunc().replace("e","eeeeeea")) # replace char
 
-
+age = 12
+name="Jack"
+txt = "My name is {}, and I am {} " # placeholder
+print(txt.format(name,age))
 
 # type
 print (type(w))
@@ -61,17 +64,59 @@ y = (1,2.05, "banana")
 x[0]=10
 # y[0]=2 (will be error)
 x[1]="apple"
+
+x.append("melon")
+x.insert(2,"orange")
+x.insert(4,"pineapple")
+x.insert(4,"appricot")
+
+
 print (x) # for a list, can assign a diff data type to each entry
+x.remove("melon")
+print (x)
+print (x[-1])
+print (x[2:5])
+print (len(x))
+
+# a set
+s={"a","b","c","a"}
+s.add("e")
+s.remove("b")   # or discard
+print (s) # set ignores repeated item
+l2=["k","l"]
+s2={"x","y","z"}
+s.update(l2)
+print(s)
+s.update(s2)
+print(s)
 
 # And a dict, curly bracket with items separated by comma, but the pair separated by colon
 z={"name":"jack", "age": 10}
 print(z)
 print (type(z))
 
+print (z.get("name"))
+z["name"]="john"
+z["heigh"]=180
+print (z)
+
+#If elif else, :. and or.
+favFood = ["carrot", "banana"]
+if "apple" in favFood:
+    print("Yes, apple is my favorite food!")
+else:
+    print("No, apple is NOT my favorite food!")
+
+a=5
+if a==6:
+    print ("a==6")
+elif a==5:
+    print ("a==5")
+else:
+    print ("no idea !")
 
 
 #To access local Bash shell, first impo os
 import os
 print (os.getcwd())
 
-#If and for
